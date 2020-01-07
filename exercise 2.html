@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise</title>
+</head>
+<body>
+    <script>
+        while(true) {
+            let items = [1,2,3,4,5,6,7,8,9,10]
+            let random = Math.random();
+            let totalLength = items.length;
+            let randomIndex = Math.floor(random * totalLength);
+            let randomItems = items[randomIndex];
+            console.log(randomItems)
+            let input = prompt('Input number 1 to 10')
+
+            if(input === "q" || input === null) {
+                alert('Goodbye')
+                break;
+            }
+            else if(isNaN(input)) {
+                alert("Input Number not letters or words")
+            }
+            else if(input == randomItems) {
+                alert("Good Work!")
+                alert("Goodbye")
+                break;
+            }
+            else {
+                alert("Not Match")
+            }
+        }
+    </script>
+</body>
+</html>

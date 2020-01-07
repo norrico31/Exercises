@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample</title>
+</head>
+<body>
+    <input type="text" id="getNumber" value="Enter number">
+    <button onclick="showResult()">Show</button>
+    <p id="displayResult"></p>
+    <script>
+        let getInput = document.getElementById("getNumber").value;
+        let showResult = () => {
+            if(isNaN(getInput))
+            {
+                document.getElementById("displayResult").innerHTML = "input is not a number!"
+            }
+            if(getInput >= 0){
+                document.getElementById("displayResult").innerHTML = "The number is Positive";
+                getInput = document.getElementById("getNumber").value;
+            }else{
+                document.getElementById("displayResult").innerHTML = "The number is Negative";
+                getInput = document.getElementById("getNumber").value;     
+            }
+        }
+        
+    </script>
+</body>
+</html>
